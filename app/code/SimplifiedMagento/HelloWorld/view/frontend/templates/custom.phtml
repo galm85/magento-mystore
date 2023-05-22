@@ -1,0 +1,49 @@
+<?php
+
+//$hello = $block->getHelloWorld();
+//$array = $block->helloArray();
+
+$viewModel = $block->getData('view_model');
+
+$hello = $viewModel->getHelloWorld();
+$array = $viewModel->helloArray();
+
+?>
+<h2><?= $viewModel->getProductName();?></h2>
+
+<h1>this is from custom hello world template</h1>
+<h2> <?= $hello ?> </h2>
+
+
+<div>
+    <ul>
+    <?php foreach ($array as $item):?>
+        <li> <?= $item ?> </li>
+    <?php endforeach;?>
+    </ul>
+
+</div>
+
+
+<!--<h2> --><?php //= $this->getShowHello(); ?><!-- </h2>-->
+<h2> <?= $hello ?></h2>
+
+<!--<div>-->
+<!--    <ul>-->
+<!--        --><?php //foreach ($this->getShowArray() as $item):?>
+<!--            <li> --><?php //= $item ?><!-- </li>-->
+<!--        --><?php //endforeach;?>
+<!--    </ul>-->
+<!--</div>-->
+
+<div>
+    <ul>
+        <?php foreach ($array as $item):?>
+            <li> <?= $item ?> </li>
+        <?php endforeach;?>
+    </ul>
+</div>
+
+
+<h3><?= $block->getProductName(); ?></h3>
+<h1> <?= rand(1,100)?></h1>

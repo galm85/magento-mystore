@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+
+    <argument name="data" xsi:type="array">
+
+            <item name="js_config" xsi:type="array">
+                <item name="provider" xsi:type="string">affiliate_member_listing.affiliate_member_listing_data_source</item>
+                <item name="deps" xsi:type="string">affiliate_member_listing.affiliate_member_listing_data_source</item>
+            </item>
+
+            <item name="spinner" xsi:type="string">affiliate_member_columns</item>
+
+            <item name="buttons" xsi:type="array">
+                <item name="add" xsi:type="array">
+                    <item name="name" xsi:type="string">add</item>
+                    <item name="label" xsi:type="string">Add a new Member</item>
+                    <item name="class" xsi:type="string">primary</item>
+                    <item name="url" xsi:type="string">*/*/newAction</item>
+                </item>
+            </item>
+
+    </argument>
+
+
+    <dataSource name="affiliate_member_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">AffiliateGridDataProvider</argument>
+            <argument name="name" xsi:type="string">affiliate_member_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                    <item name="update_url" xsi:type="url">mui/index/render</item>
+                    <item name="strongConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">entity_id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+
+
+
+    <container name="listing_top">
+
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="template" xsi:type="string">ui/grid/toolbar</item>
+                        <item name="stickTmpl" xsi:type="string">ui/grid/sticky/toolbar</item>
+                    </item>
+                </argument>
+
+                <bookmark name="bookmarks">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="storageConfig" xsi:type="array">
+                                <item name="namespace" xsi:type="string">affiliate_member_listing</item>
+                            </item>
+                        </item>
+                    </argument>
+                </bookmark>
+
+                <component name="columns_controls">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="columnsData" xsi:type="array">
+                                <item name="provider" xsi:type="string">affiliate_member_listing.affiliate_member_listing.affiliate_member_columns</item>
+                            </item>
+                            <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
+                            <item name="displayArea" xsi:type="string">dataGridActions</item>
+                        </item>
+                    </argument>
+                </component>
+
+
+                <filterSearch name="fulltext">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="provider" xsi:type="string">affiliate_member_listing.affiliate_member_listing_data_source</item>
+                            <item name="chipsProvider" xsi:type="string">affiliate_member_listing.affiliate_member_listing.listing_top.</item>
+                            <item name="storageConfig" xsi:type="array">
+                                <item name="provider" xsi:type="string>"></item>
+                                <item name="namespace" xsi:type="string>">current.search</item>
+                            </item>
+                        </item>
+                    </argument>
+                </filterSearch>
+
+
+
+
+    </container>
+
+

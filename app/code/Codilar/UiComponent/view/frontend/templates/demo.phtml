@@ -1,0 +1,29 @@
+<?php
+
+/** @var \Codilar\UiComponent\Block\Demo $block */
+
+?>
+
+
+<div id="uic-demo-container" data-bind="scope: 'uicdemo'">
+
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#uic-demo-container":{
+            "Magento_Ui/js/core/app:{
+                "components":{
+                    "uicdemo":{
+                        "component":"Codilar_UiComponent/js/view/demo",
+                        "config":{
+                            "template":"Codilar_UiComponent/demo"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+</script>
