@@ -353,6 +353,7 @@ return [
         'Gal_Test' => 1,
         'Macademy_Blog' => 1,
         'Macademy_BlogExtra' => 1,
+        'Macademy_CheckoutMessages' => 1,
         'Macademy_FreeShippingPromo' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
