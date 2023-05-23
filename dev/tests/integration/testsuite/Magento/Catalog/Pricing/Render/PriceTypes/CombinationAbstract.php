@@ -363,7 +363,7 @@ abstract class CombinationAbstract extends TestCase
     }
 
     /**
-     * Render price render template with product.
+     * Render price render templates with product.
      *
      * @param ProductInterface $product
      * @return string
@@ -378,7 +378,7 @@ abstract class CombinationAbstract extends TestCase
     }
 
     /**
-     * Render custom options price render template with product.
+     * Render custom options price render templates with product.
      *
      * @param ProductInterface $product
      * @return string

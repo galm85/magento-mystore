@@ -60,9 +60,9 @@ class FilterTest extends \PHPUnit\Framework\TestCase
     {
         $class = Footer::class;
         $data = [
-            "{{block class='$class' name='test.block' template='Magento_Theme::html/footer.phtml'}}",
+            "{{block class='$class' name='test.block' templates='Magento_Theme::html/footer.phtml'}}",
             'block',
-            " class='$class' name='test.block' template='Magento_Theme::html/footer.phtml'",
+            " class='$class' name='test.block' templates='Magento_Theme::html/footer.phtml'",
         ];
         $html = $this->model->blockDirective($data);
         $this->assertStringContainsString('<div class="footer-container">', $html);
@@ -145,7 +145,7 @@ class FilterTest extends \PHPUnit\Framework\TestCase
             ],
             'custom parameter' => [
                 'frontend',
-                'handle="email_template_test_handle" template="Magento_Email::sample_email_content_custom.phtml"',
+                'handle="email_template_test_handle" templates="Magento_Email::sample_email_content_custom.phtml"',
                 '<strong>Custom Email content for frontend/Magento/default theme</strong>',
             ],
         ];
@@ -324,7 +324,7 @@ class FilterTest extends \PHPUnit\Framework\TestCase
                 '',
                 '/* "file" parameter must be specified */'
             ],
-            'Plain-text template outputs nothing' => [
+            'Plain-text templates outputs nothing' => [
                 TemplateTypesInterface::TYPE_TEXT,
                 'file="css/email-1.css"',
                 '',
@@ -404,13 +404,13 @@ class FilterTest extends \PHPUnit\Framework\TestCase
                 '<html><p></p> {{inlinecss file="css/non-existent-file.css"}}</html>',
                 '<html><p></p> </html>',
             ],
-            'Plain template mode results in unmodified markup' => [
+            'Plain templates mode results in unmodified markup' => [
                 '<html><p></p> {{inlinecss file="css/email-inline-1.css"}}</html>',
                 '<html><p></p> </html>',
                 false,
                 true,
             ],
-            'Child template mode results in unmodified directive' => [
+            'Child templates mode results in unmodified directive' => [
                 '<html><p></p> {{inlinecss file="css/email-inline-1.css"}}</html>',
                 '<html><p></p> {{inlinecss file="css/email-inline-1.css"}}</html>',
                 false,

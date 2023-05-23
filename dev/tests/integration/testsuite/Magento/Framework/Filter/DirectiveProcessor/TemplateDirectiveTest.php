@@ -33,17 +33,17 @@ class TemplateDirectiveTest extends TestCase
 
     public function testNoTemplateProcessor()
     {
-        $template = 'blah {{template config_path="foo"}} blah';
+        $template = 'blah {{templates config_path="foo"}} blah';
         $result = $this->processor->process($this->createConstruction($this->processor, $template), $this->filter, []);
-        self::assertEquals('{Error in template processing}', $result);
+        self::assertEquals('{Error in templates processing}', $result);
     }
 
     public function testNoConfigPath()
     {
         $this->filter->setTemplateProcessor([$this, 'processTemplate']);
-        $template = 'blah {{template}} blah';
+        $template = 'blah {{templates}} blah';
         $result = $this->processor->process($this->createConstruction($this->processor, $template), $this->filter, []);
-        self::assertEquals('{Error in template processing}', $result);
+        self::assertEquals('{Error in templates processing}', $result);
     }
 
     /**
@@ -62,7 +62,7 @@ class TemplateDirectiveTest extends TestCase
 
     public function useCaseProvider()
     {
-        $prefix = '{{template config_path=$path param1=myparam ';
+        $prefix = '{{templates config_path=$path param1=myparam ';
         $expect = 'path=varpath/myparamabc/varpath';
 
         return [

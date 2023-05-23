@@ -60,7 +60,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         )->createBlock(
             \Magento\Framework\View\Element\Template::class,
             '',
-            ['data' => ['template' => 'value']]
+            ['data' => ['templates' => 'value']]
         );
         $this->assertEquals('value', $block->getTemplate());
     }
@@ -116,7 +116,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
     public function testGetCacheKeyInfo()
     {
-        $this->_block->setTemplate('non-existing-template.phtml');
-        $this->assertArrayHasKey('template', $this->_block->getCacheKeyInfo());
+        $this->_block->setTemplate('non-existing-templates.phtml');
+        $this->assertArrayHasKey('templates', $this->_block->getCacheKeyInfo());
     }
 }

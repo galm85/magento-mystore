@@ -68,7 +68,7 @@ abstract class AbstractAlertTest extends AbstractBackendController
     }
 
     /**
-     * Get alert grid record xpath template
+     * Get alert grid record xpath templates
      *
      * @return string
      */

@@ -31,7 +31,7 @@ class DescriptionTest extends TestCase
         $objectManager = Bootstrap::getObjectManager();
         $this->block = $objectManager->create(Description::class, [
             'data' => [
-                'template' => 'Magento_Catalog::product/view/attribute.phtml'
+                'templates' => 'Magento_Catalog::product/view/attribute.phtml'
             ]
         ]);
 

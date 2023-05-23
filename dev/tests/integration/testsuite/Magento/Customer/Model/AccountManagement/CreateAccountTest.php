@@ -262,7 +262,7 @@ class CreateAccountTest extends TestCase
             [
                 'name' => 'Owner',
                 'email' => 'owner@example.com',
-                'message' => 'Customer create account email template',
+                'message' => 'Customer create account email templates',
             ]
         );
     }
@@ -282,7 +282,7 @@ class CreateAccountTest extends TestCase
             [
                 'name' => 'CustomerSupport',
                 'email' => 'support@example.com',
-                'message' => 'Customer create account email no password template',
+                'message' => 'Customer create account email no password templates',
             ]
         );
     }
@@ -306,7 +306,7 @@ class CreateAccountTest extends TestCase
             [
                 'name' => 'Custom 1',
                 'email' => 'custom1@example.com',
-                'message' => 'Customer create account email confirmation template',
+                'message' => 'Customer create account email confirmation templates',
             ]
         );
     }
@@ -332,7 +332,7 @@ class CreateAccountTest extends TestCase
             [
                 'name' => 'Custom 1',
                 'email' => 'custom1@example.com',
-                'message' => 'Customer create account email confirmed template',
+                'message' => 'Customer create account email confirmed templates',
             ]
         );
     }
@@ -743,7 +743,7 @@ class CreateAccountTest extends TestCase
     }
 
     /**
-     * Returns email template id by template code.
+     * Returns email templates id by templates code.
      *
      * @param string $templateCode
      * @return int

@@ -62,18 +62,18 @@ class PrintShipmentTest extends TestCase
         $orderDate = $block->formatDate($order->getCreatedAt(), \IntlDateFormatter::LONG);
         $templates = [
             'Order status' => [
-                'template' => 'Magento_Sales::order/order_status.phtml',
+                'templates' => 'Magento_Sales::order/order_status.phtml',
                 'expected_data' => (string)__($order->getStatusLabel()),
             ],
             'Order date' => [
-                'template' => 'Magento_Sales::order/order_date.phtml',
+                'templates' => 'Magento_Sales::order/order_date.phtml',
                 'expected_data' => (string)__('Order Date: %1', $orderDate),
             ],
         ];
         foreach ($templates as $key => $data) {
             $this->assertStringContainsString(
                 $data['expected_data'],
-                strip_tags($block->setTemplate($data['template'])->toHtml()),
+                strip_tags($block->setTemplate($data['templates'])->toHtml()),
                 sprintf('%s wasn\'t found.', $key)
             );
         }

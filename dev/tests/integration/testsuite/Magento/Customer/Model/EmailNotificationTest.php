@@ -206,7 +206,7 @@ class EmailNotificationTest extends TestCase
     }
 
     /**
-     * Set email template config.
+     * Set email templates config.
      *
      * @param string $configPath
      * @return void

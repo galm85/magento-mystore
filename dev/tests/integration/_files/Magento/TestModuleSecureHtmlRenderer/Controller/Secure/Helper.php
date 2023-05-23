@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\Action;
 use Magento\Framework\Controller\ResultFactory;
 
 /**
- * .phtml template utilizing secure-html helper.
+ * .phtml templates utilizing secure-html helper.
  */
 class Helper extends Action
 {

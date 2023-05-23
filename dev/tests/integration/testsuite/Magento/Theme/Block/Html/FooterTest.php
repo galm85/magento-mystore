@@ -40,7 +40,7 @@ class FooterTest extends \PHPUnit\Framework\TestCase
             $this->_theme->getId(),
             false,
             $block->getTemplateFile(),
-            'template' => 'html/copyright.phtml'
+            'templates' => 'html/copyright.phtml'
         ];
         $this->assertEquals(
             $expected,

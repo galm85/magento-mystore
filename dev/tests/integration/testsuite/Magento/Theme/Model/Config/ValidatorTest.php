@@ -98,7 +98,7 @@ class ValidatorTest extends \PHPUnit\Framework\TestCase
         $this->model->validate($designConfigMock);
 
         $this->expectExceptionMessage(
-            'The "email_header_template" template contains an incorrect configuration, with a reference to itself. '
+            'The "email_header_template" templates contains an incorrect configuration, with a reference to itself. '
             . 'Remove or change the reference, then try again.'
         );
     }

@@ -41,7 +41,7 @@ return [
     'L_BUTTONVAR22' => 'cancel_return=' . $cancelUrl,
     'L_BUTTONVAR23' => 'return=' . $returnUrl,
     'L_BUTTONVAR24' => 'lc=US',
-    'L_BUTTONVAR25' => 'template=mobile-iframe',
+    'L_BUTTONVAR25' => 'templates=mobile-iframe',
     'L_BUTTONVAR26' => 'showBillingAddress=false',
     'L_BUTTONVAR27' => 'showShippingAddress=true',
     'L_BUTTONVAR28' => 'showBillingEmail=false',

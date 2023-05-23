@@ -73,7 +73,7 @@ $productLinkWidgetData = [
             'layout_handle' => 'default',
             'for' => 'all',
             'block' => 'content',
-            'template' => 'product/widget/link/link_block.phtml',
+            'templates' => 'product/widget/link/link_block.phtml',
         ],
     ],
     'widget_parameters' => [

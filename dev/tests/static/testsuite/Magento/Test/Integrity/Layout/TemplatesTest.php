@@ -30,10 +30,10 @@ class TemplatesTest extends \PHPUnit\Framework\TestCase
         self::getBlockVirtualTypesWithDifferentModule();
         foreach (Files::init()->getLayoutFiles([], false) as $file) {
             $xml = simplexml_load_file($file);
-            $blocks = $xml->xpath('//block[@template]') ?: [];
+            $blocks = $xml->xpath('//block[@templates]') ?: [];
             $fileTemplates = [];
             foreach ($blocks as $block) {
-                $fileTemplates[] = ['class' => (string)$block['class'], 'file' => (string)$block['template']];
+                $fileTemplates[] = ['class' => (string)$block['class'], 'file' => (string)$block['templates']];
             }
             if (!empty($fileTemplates)) {
                 self::$templates[$file] = $fileTemplates;
@@ -43,9 +43,9 @@ class TemplatesTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test that references to template files follows canonical format.
+     * Test that references to templates files follows canonical format.
      *
-     * path/to/template.phtml Format is prohibited.
+     * path/to/templates.phtml Format is prohibited.
      * @return void
      */
     public function testTemplateFollowsCanonicalName()
@@ -67,8 +67,8 @@ class TemplatesTest extends \PHPUnit\Framework\TestCase
             }
         }
         if (count($errors) > 0) {
-            $message = 'Failed to assert that the template reference follows the canonical format '
-                     . 'Vendor' . '_' . 'Module::path/to/template.phtml. Following files haven\'t pass verification:'
+            $message = 'Failed to assert that the templates reference follows the canonical format '
+                     . 'Vendor' . '_' . 'Module::path/to/templates.phtml. Following files haven\'t pass verification:'
                      . PHP_EOL;
             foreach ($errors as $file => $wrongTemplates) {
                 $message .= $file . ':' . PHP_EOL;

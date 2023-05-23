@@ -11,7 +11,7 @@ use Magento\Framework\Mail\Template\TransportBuilder;
 use Magento\Setup\Framework\Mail\TransportInterfaceMock;
 
 /**
- * Mock for mail template transport builder.
+ * Mock for mail templates transport builder.
  */
 class TransportBuilderMock extends TransportBuilder
 {

@@ -44,7 +44,7 @@ return [
                 'required' => '1',
                 'label' => 'Number of Products to Display',
             ],
-            'template' => [
+            'templates' => [
                 'type' => 'select',
                 'value' => 'product/widget/new/content/new_grid.phtml',
                 'values' => [
@@ -87,16 +87,16 @@ return [
         'supported_containers' => [
             [
                 'container_name' => 'left',
-                'template' => [
+                'templates' => [
                     'default' => 'default_template',
                     'names_only' => 'list_names',
                     'images_only' => 'list_images',
                 ],
             ],
-            ['container_name' => 'content', 'template' => ['grid' => 'default', 'list' => 'list']],
+            ['container_name' => 'content', 'templates' => ['grid' => 'default', 'list' => 'list']],
             [
                 'container_name' => 'right',
-                'template' => [
+                'templates' => [
                     'default' => 'default_template',
                     'names_only' => 'list_names',
                     'images_only' => 'list_images',

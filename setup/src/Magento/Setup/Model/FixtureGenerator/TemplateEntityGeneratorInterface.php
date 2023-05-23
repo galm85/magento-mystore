@@ -7,7 +7,7 @@
 namespace Magento\Setup\Model\FixtureGenerator;
 
 /**
- * Generate entity template which is used for entity generation
+ * Generate entity templates which is used for entity generation
  */
 interface TemplateEntityGeneratorInterface
 {

@@ -185,7 +185,7 @@ class RulePoolTest extends \PHPUnit\Framework\TestCase
                 ],
             ],
 
-            'template, modular' => [
+            'templates, modular' => [
                 \Magento\Framework\View\Design\Fallback\RulePool::TYPE_TEMPLATE_FILE,
                 [],
                 [
@@ -195,7 +195,7 @@ class RulePoolTest extends \PHPUnit\Framework\TestCase
                     $modulePath . '/view/base/templates',
                 ],
             ],
-            'template, non-modular' => [
+            'templates, non-modular' => [
                 \Magento\Framework\View\Design\Fallback\RulePool::TYPE_TEMPLATE_FILE,
                 ['namespace' => null, 'module_name' => null],
                 [
@@ -203,7 +203,7 @@ class RulePoolTest extends \PHPUnit\Framework\TestCase
                     $themeTwoPath . '/templates',
                 ],
             ],
-            'template, non-modular-magento-core' => [
+            'templates, non-modular-magento-core' => [
                 \Magento\Framework\View\Design\Fallback\RulePool::TYPE_TEMPLATE_FILE,
                 ['module_name' => 'Magento_Theme'],
                 [

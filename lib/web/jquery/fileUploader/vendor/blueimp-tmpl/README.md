@@ -131,7 +131,7 @@ require('http')
         url: 'https://github.com/blueimp/JavaScript-Templates',
         features: ['lightweight & fast', 'powerful', 'zero dependencies']
       }
-    // Override the template loading method:
+    // Override the templates loading method:
     tmpl.load = function (id) {
       var filename = id + '.html'
       console.log('Loading ' + filename)
@@ -186,12 +186,12 @@ document.getElementById('result').innerHTML = func(data)
 Templates loaded by id are cached in the map **tmpl.cache**:
 
 ```js
-var func = tmpl('tmpl-demo'), // Loads and parses the template
+var func = tmpl('tmpl-demo'), // Loads and parses the templates
   cached = typeof tmpl.cache['tmpl-demo'] === 'function', // true
-  result = tmpl('tmpl-demo', data) // Uses cached template function
+  result = tmpl('tmpl-demo', data) // Uses cached templates function
 
 tmpl.cache['tmpl-demo'] = null
-result = tmpl('tmpl-demo', data) // Loads and parses the template again
+result = tmpl('tmpl-demo', data) // Loads and parses the templates again
 ```
 
 ### Output encoding

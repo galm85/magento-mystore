@@ -89,7 +89,7 @@ class NewsletterTest extends \Magento\TestFramework\TestCase\AbstractBackendCont
         $body = $this->getResponse()->getBody();
 
         $this->assertMatchesRegularExpression(
-            '~.+\/newsletter\\\/template\\\/preview\\\/id\\\/\d+\\\/subscriber\\\/\d+\\\/.+~',
+            '~.+\/newsletter\\\/templates\\\/preview\\\/id\\\/\d+\\\/subscriber\\\/\d+\\\/.+~',
             $body
         );
     }

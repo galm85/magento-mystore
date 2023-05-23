@@ -23,7 +23,7 @@ class OptionsTest extends \PHPUnit\Framework\TestCase
         $item = new \Magento\Framework\DataObject(['product' => $product]);
         $block->setItem($item);
         $this->assertNotEmpty($block->getTemplate());
-        $block->setTemplate('template');
-        $this->assertEquals('template', $block->getTemplate());
+        $block->setTemplate('templates');
+        $this->assertEquals('templates', $block->getTemplate());
     }
 }

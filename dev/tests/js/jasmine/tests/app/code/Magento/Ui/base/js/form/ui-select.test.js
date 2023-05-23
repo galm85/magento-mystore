@@ -474,7 +474,7 @@ define([
                 }
             );
             it(
-                'Should return missing value template when isDisplayMissingValuePlaceholder is true ' +
+                'Should return missing value templates when isDisplayMissingValuePlaceholder is true ' +
                 ' and option does not exist',
                 function () {
                     obj.isDisplayMissingValuePlaceholder = true;

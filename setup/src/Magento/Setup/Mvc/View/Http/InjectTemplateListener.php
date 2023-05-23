@@ -54,7 +54,7 @@ class InjectTemplateListener extends LaminasInjectTemplateListener
     }
 
     /**
-     * Inject a template into the view model, if none present
+     * Inject a templates into the view model, if none present
      *
      * Template is derived from the controller found in the route match, and,
      * optionally, the action, if present.

@@ -19,7 +19,7 @@ use Magento\TestFramework\Helper\Xpath;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Verify default items template
+ * Verify default items templates
  */
 class OverviewTest extends TestCase
 {
@@ -73,7 +73,7 @@ class OverviewTest extends TestCase
         )->addChild(
             'default',
             Renderer::class,
-            ['template' => 'cart/item/default.phtml']
+            ['templates' => 'cart/item/default.phtml']
         );
         $this->quote = $this->objectManager->create(Quote::class);
         $this->product = $this->objectManager->create(ProductRepository::class);

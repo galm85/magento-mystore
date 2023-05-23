@@ -334,7 +334,7 @@ class PhpRuleTest extends \PHPUnit\Framework\TestCase
      */
     public function getDependencyInfoDataCaseGetTemplateUrlDataProvider()
     {
-        return [ 'getUrl from ignore template' => [
+        return [ 'getUrl from ignore templates' => [
             'app/code/Magento/Backend/view/adminhtml/templates/dashboard/totalbar/script.phtml',
             '$getUrl("adminhtml/*/ajaxBlock")',
             []]];
@@ -465,7 +465,7 @@ class PhpRuleTest extends \PHPUnit\Framework\TestCase
             ],
         ];
         $this->model = new PhpRule([], $mapLayoutBlocks, $this->webApiConfigReader);
-        $this->assertEquals($expected, $this->model->getDependencyInfo($module, 'template', 'any', $content));
+        $this->assertEquals($expected, $this->model->getDependencyInfo($module, 'templates', 'any', $content));
     }
 
     /**

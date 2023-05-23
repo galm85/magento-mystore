@@ -19,9 +19,9 @@ $templateFactory = $objectManager->get(TemplateInterfaceFactory::class);
 $template = $templateFactory->create();
 
 $content = <<<HTML
-{{template config_path="design/email/header_template"}}
-<p>{{trans "Customer create account email template"}}</p>
-{{template config_path="design/email/footer_template"}}
+{{templates config_path="design/email/header_template"}}
+<p>{{trans "Customer create account email templates"}}</p>
+{{templates config_path="design/email/footer_template"}}
 HTML;
 
 $template->setTemplateCode('customer_create_account_email_template')

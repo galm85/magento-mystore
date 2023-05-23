@@ -72,7 +72,7 @@ class LayoutTest extends TestCase
     }
 
     /**
-     * Check that escapeUrl called from template
+     * Check that escapeUrl called from templates
      *
      * @return void
      */

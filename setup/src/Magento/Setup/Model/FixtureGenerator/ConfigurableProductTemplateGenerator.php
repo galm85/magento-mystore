@@ -15,7 +15,7 @@ use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Framework\App\ResourceConnection;
 
 /**
- * Configurable product template generator. Return newly created configurable product for specified attribute set
+ * Configurable product templates generator. Return newly created configurable product for specified attribute set
  * with default values for product attributes
  */
 class ConfigurableProductTemplateGenerator implements TemplateEntityGeneratorInterface
@@ -71,7 +71,7 @@ class ConfigurableProductTemplateGenerator implements TemplateEntityGeneratorInt
     }
 
     /**
-     * Get product template
+     * Get product templates
      *
      * @param int $attributeSet
      * @return ProductInterface
@@ -83,8 +83,8 @@ class ConfigurableProductTemplateGenerator implements TemplateEntityGeneratorInt
             'data' => [
                 'attribute_set_id' => $attributeSet,
                 'type_id' => Configurable::TYPE_CODE,
-                'name' => 'template name' . $productRandomizerNumber,
-                'url_key' => 'template-url' . $productRandomizerNumber,
+                'name' => 'templates name' . $productRandomizerNumber,
+                'url_key' => 'templates-url' . $productRandomizerNumber,
                 'sku' => 'template_sku_configurable' . $productRandomizerNumber,
                 'meta_description' => 'Configurable Product',
                 'meta_keyword' => $productRandomizerNumber,

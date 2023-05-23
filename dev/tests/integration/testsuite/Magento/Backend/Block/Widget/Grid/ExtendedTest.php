@@ -96,7 +96,7 @@ class ExtendedTest extends TestCase
     }
 
     /**
-     * Checks that template does not have redundant div close tag
+     * Checks that templates does not have redundant div close tag
      *
      * @return void
      */

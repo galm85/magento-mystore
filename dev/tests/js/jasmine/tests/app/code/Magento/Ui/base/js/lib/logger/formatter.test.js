@@ -65,7 +65,7 @@ define([
                 expect(formatter.process(entry)).toBe('[' + date + '] [DEBUG] message text');
             });
 
-            it('may use custom template', function () {
+            it('may use custom templates', function () {
                 var dateFormat = 'MMMM Do YYYY, h:mm:ss a',
                     template = '[${ $.date }]: ${ $.message } (${$.entry.levelName}-CUSTOM)',
                     formatter = new Formatter(dateFormat, template),

@@ -137,7 +137,7 @@ class LayoutTest extends TestCase
                 <block class="Magento\Framework\View\Element\Text" name="block1">
                     <block class="Magento\Framework\View\Element\Text"/>
                 </block>
-                <block class="Magento\Framework\View\Element\Text" template="test" ttl="360"/>
+                <block class="Magento\Framework\View\Element\Text" templates="test" ttl="360"/>
                 <block class="Magento\Framework\View\Element\Text"/>
             </frontend>',
                 Element::class
@@ -149,7 +149,7 @@ class LayoutTest extends TestCase
         $this->assertSame($expected, array_keys($this->layout->getAllBlocks()));
         $child = $this->layout->getBlock('block1_schedule_block0');
         $this->assertSame($this->layout->getBlock('block1'), $child->getParentBlock());
-        $this->assertEquals('test', $this->layout->getBlock('schedule_block1')->getData('template'));
+        $this->assertEquals('test', $this->layout->getBlock('schedule_block1')->getData('templates'));
         $this->assertEquals('360', $this->layout->getBlock('schedule_block1')->getData('ttl'));
         $this->assertFalse($this->layout->getBlock('nonexisting'));
     }

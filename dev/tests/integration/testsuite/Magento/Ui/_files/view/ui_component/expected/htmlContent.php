@@ -76,8 +76,8 @@ return [
                             'xsi:type' => 'string',
                             'value' => 'string',
                         ],
-                        'template' => [
-                            'name' => 'template',
+                        'templates' => [
+                            'name' => 'templates',
                             'xsi:type' => 'string',
                             'value' => 'string',
                         ],

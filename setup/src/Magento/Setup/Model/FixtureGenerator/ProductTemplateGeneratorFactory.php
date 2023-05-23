@@ -12,7 +12,7 @@ use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Framework\ObjectManagerInterface;
 
 /**
- * Provide product template generator based on specified product type from fixture
+ * Provide product templates generator based on specified product type from fixture
  */
 class ProductTemplateGeneratorFactory
 {
@@ -48,7 +48,7 @@ class ProductTemplateGeneratorFactory
         $type = isset($fixture['type_id']) ? $fixture['type_id'] : Type::TYPE_SIMPLE;
         if (!isset($this->templateEntityMap[$type])) {
             throw new \InvalidArgumentException(sprintf(
-                'Cannot instantiate product template generator. Wrong type_id "%s" passed',
+                'Cannot instantiate product templates generator. Wrong type_id "%s" passed',
                 $type
             ));
         }

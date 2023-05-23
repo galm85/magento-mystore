@@ -71,7 +71,7 @@ class DateTest extends TestCase
             'product.info.options.date',
             [
                 'data' => [
-                    'template' => 'Magento_Catalog::product/view/options/type/date.phtml'
+                    'templates' => 'Magento_Catalog::product/view/options/type/date.phtml'
                 ]
             ]
         );

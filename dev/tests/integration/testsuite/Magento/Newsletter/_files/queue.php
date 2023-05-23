@@ -5,7 +5,7 @@
  */
 use Magento\TestFramework\Workaround\Override\Fixture\Resolver;
 
-Resolver::getInstance()->requireDataFixture('Magento/Newsletter/_files/template.php');
+Resolver::getInstance()->requireDataFixture('Magento/Newsletter/_files/templates.php');
 Resolver::getInstance()->requireDataFixture('Magento/Newsletter/_files/subscribers.php');
 
 /** @var $objectManager \Magento\TestFramework\ObjectManager */

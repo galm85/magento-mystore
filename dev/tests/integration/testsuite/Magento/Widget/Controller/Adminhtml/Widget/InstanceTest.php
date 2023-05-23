@@ -76,7 +76,7 @@ class InstanceTest extends AbstractBackendController
     public function testTemplateAction(): void
     {
         $this->getRequest()->setMethod('POST');
-        $this->dispatch('backend/admin/widget_instance/template');
-        $this->assertStringStartsWith('<select name="template" id=""', $this->getResponse()->getBody());
+        $this->dispatch('backend/admin/widget_instance/templates');
+        $this->assertStringStartsWith('<select name="templates" id=""', $this->getResponse()->getBody());
     }
 }

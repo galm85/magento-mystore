@@ -619,7 +619,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * Return email template id by origin template code
+     * Return email templates id by origin templates code
      *
      * @param string $origTemplateCode
      * @return int|null
@@ -637,7 +637,7 @@ class UserTest extends TestCase
         }
         if ($templateId === null) {
             throw new NotFoundException(new Phrase(
-                'Customized %templateCode% email template not found',
+                'Customized %templateCode% email templates not found',
                 ['templateCode' => $origTemplateCode]
             ));
         }

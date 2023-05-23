@@ -72,7 +72,7 @@ class AdjustmentTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * test template for isIncludedInDisplayPrice
+     * test templates for isIncludedInDisplayPrice
      *
      * @param $expectedResult
      */

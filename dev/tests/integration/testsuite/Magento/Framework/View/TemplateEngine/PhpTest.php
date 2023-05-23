@@ -50,7 +50,7 @@ class PhpTest extends TestCase
 
         $rendered = $this->templateEngine->render($block, __DIR__ .'/../_files/test_template.phtml');
         $this->assertEquals(
-            '<p>This template has access to &lt;b&gt;$escaper&lt;/b&gt; and $block &quot;<b>BLOCK</b>&quot;</p>'
+            '<p>This templates has access to &lt;b&gt;$escaper&lt;/b&gt; and $block &quot;<b>BLOCK</b>&quot;</p>'
             .PHP_EOL,
             $rendered
         );

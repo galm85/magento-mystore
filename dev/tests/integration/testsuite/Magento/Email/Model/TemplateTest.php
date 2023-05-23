@@ -126,7 +126,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test template directive to ensure that templates can be loaded from modules
+     * Test templates directive to ensure that templates can be loaded from modules
      *
      * @param string $area
      * @param string $templateId
@@ -173,25 +173,25 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             'Template from theme - frontend' => [
                 Area::AREA_FRONTEND,
                 'customer_create_account_email_template',
-                'customer_create_account_email_template template from Vendor/custom_theme',
+                'customer_create_account_email_template templates from Vendor/custom_theme',
                 Area::AREA_FRONTEND,
             ],
             'Template from parent theme - frontend' => [
                 Area::AREA_FRONTEND,
                 'customer_create_account_email_confirmation_template',
-                'customer_create_account_email_confirmation_template template from Vendor/default',
+                'customer_create_account_email_confirmation_template templates from Vendor/default',
                 Area::AREA_FRONTEND,
             ],
             'Template from grandparent theme - frontend' => [
                 Area::AREA_FRONTEND,
                 'customer_create_account_email_confirmed_template',
-                'customer_create_account_email_confirmed_template template from Magento/default',
+                'customer_create_account_email_confirmed_template templates from Magento/default',
                 Area::AREA_FRONTEND,
             ],
             'Template from grandparent theme - adminhtml' => [
                 BackendFrontNameResolver::AREA_CODE,
                 'catalog_productalert_cron_error_email_template',
-                'catalog_productalert_cron_error_email_template template from Magento/default',
+                'catalog_productalert_cron_error_email_template templates from Magento/default',
                 BackendFrontNameResolver::AREA_CODE,
             ],
 
@@ -199,7 +199,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test template directive to ensure that templates can be loaded from modules, overridden in backend, and
+     * Test templates directive to ensure that templates can be loaded from modules, overridden in backend, and
      * overridden in themes
      *
      * @magentoDataFixture Magento/Store/_files/core_fixturestore.php
@@ -247,7 +247,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             $template->setData($templateData);
             $template->save();
 
-            // Store the ID of the newly created template in the system config so that this template will be loaded
+            // Store the ID of the newly created templates in the system config so that this templates will be loaded
             $this->objectManager->get(\Magento\Framework\App\Config\MutableScopeConfigInterface::class)
                 ->setValue($storeConfigPath, $template->getId(), ScopeInterface::SCOPE_STORE, 'fixturestore');
         }
@@ -267,26 +267,26 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             'Template from module folder - adminhtml' => [
                 BackendFrontNameResolver::AREA_CODE,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="design/email/footer_template"}}',
+                '{{templates config_path="design/email/footer_template"}}',
                 "</table>\n<!-- End wrapper table -->",
             ],
             'Template from module folder - frontend' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="design/email/footer_template"}}',
+                '{{templates config_path="design/email/footer_template"}}',
                 "</table>\n<!-- End wrapper table -->",
             ],
             'Template from module folder - plaintext' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_TEXT,
-                '{{template config_path="design/email/footer_template"}}',
+                '{{templates config_path="design/email/footer_template"}}',
                 'Thank you',
                 "</table>\n<!-- End wrapper table -->",
             ],
             'Template overridden in backend - adminhtml' => [
                 BackendFrontNameResolver::AREA_CODE,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="design/email/footer_template"}}',
+                '{{templates config_path="design/email/footer_template"}}',
                 '<b>Footer configured in backend - email loaded via adminhtml</b>',
                 null,
                 'design/email/footer_template',
@@ -294,7 +294,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             'Template overridden in backend - frontend' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="design/email/footer_template"}}',
+                '{{templates config_path="design/email/footer_template"}}',
                 '<b>Footer configured in backend - email loaded via frontend</b>',
                 null,
                 'design/email/footer_template',
@@ -302,26 +302,26 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
             'Template from theme - frontend' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="customer/create_account/email_template"}}',
-                '<strong>customer_create_account_email_template template from Vendor/custom_theme</strong>',
+                '{{templates config_path="customer/create_account/email_template"}}',
+                '<strong>customer_create_account_email_template templates from Vendor/custom_theme</strong>',
             ],
             'Template from parent theme - frontend' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="customer/create_account/email_confirmation_template"}}',
-                '<strong>customer_create_account_email_confirmation_template template from Vendor/default</strong',
+                '{{templates config_path="customer/create_account/email_confirmation_template"}}',
+                '<strong>customer_create_account_email_confirmation_template templates from Vendor/default</strong',
             ],
             'Template from grandparent theme - frontend' => [
                 Area::AREA_FRONTEND,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="customer/create_account/email_confirmed_template"}}',
-                '<strong>customer_create_account_email_confirmed_template template from Magento/default</strong',
+                '{{templates config_path="customer/create_account/email_confirmed_template"}}',
+                '<strong>customer_create_account_email_confirmed_template templates from Magento/default</strong',
             ],
             'Template from grandparent theme - adminhtml' => [
                 BackendFrontNameResolver::AREA_CODE,
                 TemplateTypesInterface::TYPE_HTML,
-                '{{template config_path="catalog/productalert_cron/error_email_template"}}',
-                '<strong>catalog_productalert_cron_error_email_template template from Magento/default</strong',
+                '{{templates config_path="catalog/productalert_cron/error_email_template"}}',
+                '<strong>catalog_productalert_cron_error_email_template templates from Magento/default</strong',
                 null,
                 null,
                 true,
@@ -343,7 +343,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
         $this->model->setTemplateType(TemplateTypesInterface::TYPE_HTML);
         // The first variable should be processed because it didn't come from the DB
-        $template = '{{var store.isSaveAllowed()}} - {{template config_path="design/email/footer_template"}}';
+        $template = '{{var store.isSaveAllowed()}} - {{templates config_path="design/email/footer_template"}}';
         $this->model->setTemplateText($template);
 
         // Allows for testing of templates overridden in backend
@@ -351,14 +351,14 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $templateData = [
             'template_code' => 'some_unique_code',
             'template_type' => TemplateTypesInterface::TYPE_HTML,
-            // This template will be processed in strict mode
+            // This templates will be processed in strict mode
             'template_text' => '{{var this.template_code}}'
                 . ' - {{var store.isSaveAllowed()}} - {{var this.getTemplateCode()}}',
         ];
         $template->setData($templateData);
         $template->save();
 
-        // Store the ID of the newly created template in the system config so that this template will be loaded
+        // Store the ID of the newly created templates in the system config so that this templates will be loaded
         $this->objectManager->get(\Magento\Framework\App\Config\MutableScopeConfigInterface::class)
             ->setValue('design/email/footer_template', $template->getId(), ScopeInterface::SCOPE_STORE, 'fixturestore');
 
@@ -378,7 +378,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $this->setUpThemeFallback(BackendFrontNameResolver::AREA_CODE);
 
         $this->model->setTemplateType(TemplateTypesInterface::TYPE_HTML);
-        $template = '{{var store.isSaveAllowed()}} - {{template config_path="design/email/footer_template"}}';
+        $template = '{{var store.isSaveAllowed()}} - {{templates config_path="design/email/footer_template"}}';
         $this->model->setTemplateText($template);
 
         $template = $this->objectManager->create(\Magento\Email\Model\Template::class);
@@ -391,7 +391,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $template->setData($templateData);
         $template->save();
 
-        // Store the ID of the newly created template in the system config so that this template will be loaded
+        // Store the ID of the newly created templates in the system config so that this templates will be loaded
         $this->objectManager->get(\Magento\Framework\App\Config\MutableScopeConfigInterface::class)
             ->setValue('design/email/footer_template', $template->getId(), ScopeInterface::SCOPE_STORE, 'fixturestore');
 
@@ -411,7 +411,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $this->setUpThemeFallback(BackendFrontNameResolver::AREA_CODE);
 
         $this->model->setTemplateType(TemplateTypesInterface::TYPE_HTML);
-        $template = '{{var store.isSaveAllowed()}} - {{template config_path="design/email/footer_template"}}';
+        $template = '{{var store.isSaveAllowed()}} - {{templates config_path="design/email/footer_template"}}';
         $this->model->setTemplateText($template);
 
         $template = $this->objectManager->create(\Magento\Email\Model\Template::class);
@@ -424,7 +424,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $template->setData($templateData);
         $template->save();
 
-        // Store the ID of the newly created template in the system config so that this template will be loaded
+        // Store the ID of the newly created templates in the system config so that this templates will be loaded
         $this->objectManager->get(\Magento\Framework\App\Config\MutableScopeConfigInterface::class)
             ->setValue('design/email/footer_template', $template->getId(), ScopeInterface::SCOPE_STORE, 'fixturestore');
 
@@ -433,7 +433,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
     /**
      * Ensure that the template_styles variable contains styles from either <!--@styles @--> or the "Template Styles"
-     * textarea in backend, depending on whether template was loaded from filesystem or DB.
+     * textarea in backend, depending on whether templates was loaded from filesystem or DB.
      *
      * @magentoDataFixture Magento/Store/_files/core_fixturestore.php
      * @magentoComponentsDir Magento/Email/Model/_files/design
@@ -459,7 +459,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
 
             $this->model->load($templateId);
         } else {
-            // <!--@styles @--> parsing only via the loadDefault method. Since email template files won't contain
+            // <!--@styles @--> parsing only via the loadDefault method. Since email templates files won't contain
             // @styles comments by default, it is necessary to mock an object to return testable contents
             $themeDirectory = $this->getMockBuilder(\Magento\Framework\Filesystem\Directory\ReadInterface::class)
                 ->disableOriginalConstructor()
@@ -757,7 +757,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     public function testGetTypeNonExistentType()
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('Email template \'foo\' is not defined.');
+        $this->expectExceptionMessage('Email templates \'foo\' is not defined.');
 
         $this->mockModel();
         $this->model->setId('foo');
@@ -812,7 +812,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     public function testBeforeSaveEmptyTemplateCode()
     {
         $this->expectException(\Magento\Framework\Exception\MailException::class);
-        $this->expectExceptionMessage('Please enter a template name.');
+        $this->expectExceptionMessage('Please enter a templates name.');
 
         $this->mockModel();
         $this->model->beforeSave();
@@ -821,7 +821,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
     public function testBeforeSave()
     {
         $this->mockModel();
-        $this->model->setTemplateCode('test template code');
+        $this->model->setTemplateCode('test templates code');
         $this->model->beforeSave();
     }
 
